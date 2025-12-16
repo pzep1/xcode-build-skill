@@ -1,10 +1,41 @@
 # xcode-build-skill
 
-A Claude Code skill that teaches Claude to build and manage iOS/macOS projects using native Xcode CLI tools (`xcodebuild`, `xcrun simctl`) instead of MCP servers.
+A Claude Code plugin that teaches Claude to build and manage iOS/macOS projects using native Xcode CLI tools (`xcodebuild`, `xcrun simctl`) instead of MCP servers.
+
+## Installation
+
+### Option 1: Install from GitHub (Recommended)
+
+```bash
+# Add the marketplace
+/plugin marketplace add YOUR_USERNAME/xcode-build-skill
+
+# Install the plugin
+/plugin install xcode-build-skill@xcode-build-marketplace
+```
+
+### Option 2: Install Directly from Git URL
+
+```bash
+/plugin install --git https://github.com/YOUR_USERNAME/xcode-build-skill
+```
+
+### Option 3: Local Installation (for development)
+
+```bash
+# Clone the repo
+git clone https://github.com/YOUR_USERNAME/xcode-build-skill.git
+
+# Add as local marketplace
+/plugin marketplace add ./xcode-build-skill
+
+# Install
+/plugin install xcode-build-skill@xcode-build-marketplace
+```
 
 ## What It Does
 
-This skill provides Claude with comprehensive guidance for:
+This plugin provides Claude with comprehensive guidance for:
 
 - **Building iOS/macOS apps** with `xcodebuild`
 - **Managing simulators** with `xcrun simctl` (boot, install, launch, logs)
@@ -13,40 +44,14 @@ This skill provides Claude with comprehensive guidance for:
 
 ## Why Use This?
 
-Instead of relying on external MCP servers like XcodeBuildMCP, this skill teaches Claude to use Apple's native CLI tools directly. Benefits:
+Instead of relying on external MCP servers like XcodeBuildMCP, this plugin teaches Claude to use Apple's native CLI tools directly.
 
-| Aspect | MCP Approach | This Skill |
-|--------|--------------|------------|
+| Aspect | MCP Approach | This Plugin |
+|--------|--------------|-------------|
 | Dependencies | External MCP server | None (native tools) |
 | Flexibility | Limited to MCP tools | Full CLI capabilities |
 | UI Automation | Coordinate-based | Semantic element targeting |
 | Learning | Abstracts away details | Teaches actual commands |
-
-## Installation
-
-### Option 1: Clone to User Skills (Recommended)
-
-```bash
-# Clone directly to your Claude skills directory
-git clone https://github.com/YOUR_USERNAME/xcode-build-skill.git ~/.claude/skills/xcode-build
-```
-
-### Option 2: Clone Anywhere + Symlink
-
-```bash
-# Clone to your projects
-git clone https://github.com/YOUR_USERNAME/xcode-build-skill.git ~/Projects/xcode-build-skill
-
-# Symlink to Claude skills
-ln -s ~/Projects/xcode-build-skill ~/.claude/skills/xcode-build
-```
-
-### Option 3: Project-Level Skill
-
-```bash
-# Add to a specific project
-git clone https://github.com/YOUR_USERNAME/xcode-build-skill.git .claude/skills/xcode-build
-```
 
 ## Usage
 
@@ -63,13 +68,21 @@ Once installed, the skill auto-activates when you ask Claude about:
 - "Take a screenshot of the running app"
 - "How do I tap a button in a UI test?"
 
-## Files
+## Plugin Structure
 
-| File | Description |
-|------|-------------|
-| `SKILL.md` | Main skill definition with frontmatter |
-| `CLI_REFERENCE.md` | Complete `xcodebuild` and `xcrun simctl` command reference |
-| `XCUITEST_GUIDE.md` | XCUITest UI automation patterns |
+```
+xcode-build-skill/
+├── .claude-plugin/
+│   ├── plugin.json           # Plugin manifest
+│   └── marketplace.json      # Marketplace manifest
+├── skills/
+│   └── xcode-build/
+│       ├── SKILL.md          # Main skill definition
+│       ├── CLI_REFERENCE.md  # xcodebuild + simctl reference
+│       └── XCUITEST_GUIDE.md # UI automation guide
+├── README.md
+└── LICENSE
+```
 
 ## Quick Reference
 
@@ -125,3 +138,7 @@ MIT License - see [LICENSE](LICENSE)
 ## Contributing
 
 Contributions welcome! Please feel free to submit issues and pull requests.
+
+---
+
+**Note:** Replace `YOUR_USERNAME` with your actual GitHub username after pushing to GitHub.

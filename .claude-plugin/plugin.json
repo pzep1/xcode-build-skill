@@ -1,0 +1,21 @@
+{
+  "name": "xcode-build-skill",
+  "description": "Build and manage iOS/macOS apps using native xcodebuild and xcrun simctl CLI tools. Replaces XcodeBuildMCP with direct CLI commands and XCUITest for UI automation.",
+  "version": "1.0.0",
+  "author": {
+    "name": "pz"
+  },
+  "repository": "https://github.com/pz/xcode-build-skill",
+  "license": "MIT",
+  "keywords": [
+    "xcode",
+    "ios",
+    "macos",
+    "swift",
+    "xcodebuild",
+    "simctl",
+    "simulator",
+    "xcuitest",
+    "ui-testing"
+  ]
+}

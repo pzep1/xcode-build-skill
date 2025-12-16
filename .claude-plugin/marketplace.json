@@ -1,0 +1,30 @@
+{
+  "name": "xcode-build-marketplace",
+  "owner": {
+    "name": "pz"
+  },
+  "metadata": {
+    "description": "Claude Code plugins for iOS/macOS development",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "xcode-build-skill",
+      "source": ".",
+      "description": "Build and manage iOS/macOS apps using native xcodebuild and xcrun simctl CLI tools. Replaces XcodeBuildMCP with direct CLI commands and XCUITest for UI automation.",
+      "version": "1.0.0",
+      "author": {
+        "name": "pz"
+      },
+      "license": "MIT",
+      "keywords": [
+        "xcode",
+        "ios",
+        "macos",
+        "swift",
+        "simulator",
+        "xcuitest"
+      ]
+    }
+  ]
+}
