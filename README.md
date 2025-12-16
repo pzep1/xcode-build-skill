@@ -8,7 +8,7 @@ A Claude Code plugin that teaches Claude to build and manage iOS/macOS projects 
 
 ```bash
 # Add the marketplace
-/plugin marketplace add YOUR_USERNAME/xcode-build-skill
+/plugin marketplace add pzep1/xcode-build-skill
 
 # Install the plugin
 /plugin install xcode-build-skill@xcode-build-marketplace
@@ -17,14 +17,14 @@ A Claude Code plugin that teaches Claude to build and manage iOS/macOS projects 
 ### Option 2: Install Directly from Git URL
 
 ```bash
-/plugin install --git https://github.com/YOUR_USERNAME/xcode-build-skill
+/plugin install --git https://github.com/pzep1/xcode-build-skill
 ```
 
 ### Option 3: Local Installation (for development)
 
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/xcode-build-skill.git
+git clone https://github.com/pzep1/xcode-build-skill.git
 
 # Add as local marketplace
 /plugin marketplace add ./xcode-build-skill
@@ -140,5 +140,3 @@ MIT License - see [LICENSE](LICENSE)
 Contributions welcome! Please feel free to submit issues and pull requests.
 
 ---
-
-**Note:** Replace `YOUR_USERNAME` with your actual GitHub username after pushing to GitHub.
