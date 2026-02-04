@@ -1,41 +1,16 @@
 # xcode-build-skill
 
-A Claude Code plugin that teaches Claude to build and manage iOS/macOS projects using native Xcode CLI tools (`xcodebuild`, `xcrun simctl`) instead of MCP servers.
+An agent plugin that teaches your agent to build and manage iOS/macOS projects using native Xcode CLI tools (`xcodebuild`, `xcrun simctl`) instead of MCP servers.
 
 ## Installation
 
-### Option 1: Install from GitHub (Recommended)
+### Option 1: Install from skills.sh (Recommended)
 
-```bash
-# Add the marketplace
-/plugin marketplace add pzep1/xcode-build-skill
-
-# Install the plugin
-/plugin install xcode-build-skill@xcode-build-marketplace
-```
-
-### Option 2: Install Directly from Git URL
-
-```bash
-/plugin install --git https://github.com/pzep1/xcode-build-skill
-```
-
-### Option 3: Local Installation (for development)
-
-```bash
-# Clone the repo
-git clone https://github.com/pzep1/xcode-build-skill.git
-
-# Add as local marketplace
-/plugin marketplace add ./xcode-build-skill
-
-# Install
-/plugin install xcode-build-skill@xcode-build-marketplace
-```
+npx skills add pzep1/xcode-build-skill
 
 ## What It Does
 
-This plugin provides Claude with comprehensive guidance for:
+This plugin provides agents with comprehensive guidance for:
 
 - **Building iOS/macOS apps** with `xcodebuild`
 - **Managing simulators** with `xcrun simctl` (boot, install, launch, logs)
@@ -128,7 +103,7 @@ XCTAssertTrue(app.staticTexts["Welcome"].exists)
 ## Requirements
 
 - macOS with Xcode installed
-- Claude Code CLI
+- agentic harness
 - `jq` (optional, for parsing JSON output)
 
 ## License
